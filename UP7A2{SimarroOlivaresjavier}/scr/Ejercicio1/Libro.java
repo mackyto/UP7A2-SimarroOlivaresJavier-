@@ -6,12 +6,17 @@
 /**
  *
  *  1.  Desarrolla un programa que simule una pila de libros. Cada libro tendrá 
- *      un título y un autor. Implementa las operaciones básicas: apilar un libro, 
- *      desapilar un libro y mostrar el libro que está en la cima de la pila. 
+ *      un título y un autor. Implementa las operaciones básicas:
+ *          
+ *          apilar un libro, 
+ *          desapilar un libro y 
+ *          mostrar el libro que está en la cima de la pila. 
  * 
- *      También deberá poder mostrar si la pila está vacía. Utiliza una clase 
- *      libro con los atributos título y autor. Controla los posibles errores y 
- *      excepciones.
+ *      También deberá poder mostrar si la pila está vacía. 
+ * 
+ *      Utiliza una clase libro con los atributos título y autor. 
+ * 
+ *      Controla los posibles errores y excepciones.
  * 
  * @author macky
  */
@@ -20,11 +25,29 @@ public class Libro {
     private String titulo;
     private String autor;
 
-    public Libro(String titulo, String autor) {
-        if (this.stringNoNulo(titulo, "título")))
+    public Libro(String titulo, String autor) throws Exception {
+        if (this.stringNoNulo(titulo, "título"))
             this.titulo = titulo;
-        
-        this.autor = autor;
+        if (this.stringNoNulo(titulo, "autor"))        
+            this.autor = autor;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) throws Exception {
+        if (this.stringNoNulo(titulo, "título"))
+            this.titulo = titulo;
+    }
+
+    public String getAutor() {
+        return autor;
+    }
+
+    public void setAutor(String autor) throws Exception {
+        if (this.stringNoNulo(titulo, "autor"))        
+            this.autor = autor;
     }
     
     
