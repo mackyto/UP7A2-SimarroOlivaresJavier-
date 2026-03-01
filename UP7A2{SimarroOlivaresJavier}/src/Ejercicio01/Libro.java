@@ -34,7 +34,7 @@ public class Libro {
         return titulo;
     }
 
-    public void setTitulo(String titulo) {
+    public void setTitulo(String titulo) throws Exception {
         if (this.stringNoNulo(titulo))
             this.titulo = titulo;
     }
@@ -43,7 +43,7 @@ public class Libro {
         return autor;
     }
 
-    public void setAutor(String autor) {
+    public void setAutor(String autor) throws Exception {
         if (this.stringNoNulo(autor))
             this.autor = autor;
     }
