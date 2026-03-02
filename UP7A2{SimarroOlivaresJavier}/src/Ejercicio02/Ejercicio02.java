@@ -9,7 +9,7 @@ import java.util.Queue;
 
 /**
  *
- * Crea un programa que gestione una cola de impresión. 
+ *  Crea un programa que gestione una cola de impresión. 
  *  Cada documento tendrá un nombre y un número de páginas. 
  *  El programa debe permitir añadir documentos a la cola, 
  *  imprimir (eliminar) el primer documento y mostrar todos los documentos en cola.
