@@ -53,8 +53,5 @@ public class Ejercicio06 {
         return inverso;
         
     }
-   
-    
-    
     
 }
