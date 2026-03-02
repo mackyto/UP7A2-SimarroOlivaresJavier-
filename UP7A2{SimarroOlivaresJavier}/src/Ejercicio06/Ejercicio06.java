@@ -43,7 +43,10 @@ public class Ejercicio06 {
         
     }
     
+    public static Asistente subirAsistente () {
+        
+    }
     
-    
+    public static void 
     
 }
