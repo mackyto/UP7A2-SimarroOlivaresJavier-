@@ -4,6 +4,9 @@
  */
 package Ejercicio06;
 
+import java.util.ArrayDeque;
+import java.util.Queue;
+
 /**
  *
  * Implementa un programa que gestione una cola de espera para las atracciones de PortAventura. 
@@ -22,6 +25,23 @@ package Ejercicio06;
  */
 public class Ejercicio06 {
     
+    private static Queue pendientes;
+    
+    
+    public static void main (String[] args) {
+        
+        pendientes = new ArrayDeque<>();
+        
+        
+        
+        
+        
+        
+    }
+    
+    public static void añadirAsistente () {
+        
+    }
     
     
     
