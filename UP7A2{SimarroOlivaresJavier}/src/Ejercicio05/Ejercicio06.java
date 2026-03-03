@@ -40,16 +40,15 @@ public class Ejercicio06 {
     public static String invertido (String frase) {
         
         String inverso = "";
-        
+
         for (int i = 0; i < frase.length(); i++){
             reverso.push(frase.charAt(i));
         }
-        
+
         for (int i = 0; i < frase.length(); i++){
-            inverso = inverso.concat(String.format("%s", reverso.pop()));
+            inverso = inverso + reverso.pop();
         }
-        System.out.println(inverso);
-        
+
         return inverso;
         
     }

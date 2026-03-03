@@ -45,15 +45,17 @@ public class Ejercicio04 {
                 
                     case '1': añadirCliente(); break;
                     case '2': finalizarCliente(); break;
-                    case '3': System.out.println(estimacionTiempo());break;
+                    case '3': System.out.printf("Tiempo estimado de cola %s\n\n", estimacionTiempo());break;
+                    case 'x': break;
+                    case 'X': break;
                     default : throw new Exception ("Opcion de menú icorrecta");
                 }
-            } while (opcion != 'x' || opcion != 'X');
+                
+            } while (!(opcion == 'x' || opcion == 'X'));
         }catch (Exception e) {
             System.err.println(e.getMessage());
         }
-        
-        
+   
     } 
     
 
@@ -61,7 +63,7 @@ public class Ejercicio04 {
         
         char select;
         
-        System.out.println("Menu");
+        System.out.printf("Menu (%d Clientes añadidos)\n", cola.size());
         System.out.println("========================="); 
         System.out.println("1 Añadir Cliente."); 
         System.out.println("2 Borrar Cliente.");
@@ -81,9 +83,8 @@ public class Ejercicio04 {
     public static void añadirCliente () {
         int articulos = (int)(Math.random() * 50);
         cola.add(new Clientes(
-            nombres[(int)(Math.random() * 27)],
+            nombres[(int)(Math.random() * 25)],
             articulos));
-        
         numeroTotalArticulos += articulos; 
     }
     

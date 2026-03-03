@@ -14,6 +14,20 @@ public class Asistente {
     private int edad;
     private double altura;
 
+    private String[] nombres = {
+        "Ana", "Carlos", "María", "Juan", "Laura", "Pedro", "Sofía", "Diego",
+        "Valentina", "Miguel", "Camila", "José", "Fernanda", "Andrés", "Lucía",
+        "Javier", "Daniela", "Alejandro", "Paula", "Sergio", "Andrea", "Ricardo",
+        "Gabriela", "Fernando", "Isabella", "Javier"};
+    
+    public Asistente() {
+        
+        this.nombre = nombres[(int)(Math.random() * 25 +1)];
+        this.edad = this.crearEdad();
+        this.altura = this.calcularAltura(this.edad);
+
+    }
+
     public Asistente(String nombre, int edad, double altura) {
         this.nombre = nombre;
         this.edad = edad;
@@ -44,7 +58,19 @@ public class Asistente {
         this.altura = altura;
     }
     
+    public int crearEdad () {
+        return (int)(Math.random() * 35) + 5;
+    }
     
+    public double calcularAltura (int edad) {
     
+        if (edad > 23)
+            edad = 23;
+        
+        double altura = 100 + (edad * 3);
+        double ruido = Math.random() * 17 - 8;
+        return (altura + ruido) / 100;
+
+    }
     
 }
