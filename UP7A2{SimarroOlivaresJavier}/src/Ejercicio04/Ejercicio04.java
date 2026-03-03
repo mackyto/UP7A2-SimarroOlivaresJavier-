@@ -48,7 +48,7 @@ public class Ejercicio04 {
                     case '3': System.out.printf("Tiempo estimado de cola %s\n\n", estimacionTiempo());break;
                     case 'x': break;
                     case 'X': break;
-                    default : throw new Exception ("Opcion de menú icorrecta");
+                    default : throw new Exception ("Opcion de menú incorrecta");
                 }
                 
             } while (!(opcion == 'x' || opcion == 'X'));

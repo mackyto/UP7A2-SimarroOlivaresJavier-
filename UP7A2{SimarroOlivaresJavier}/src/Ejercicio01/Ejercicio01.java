@@ -36,7 +36,6 @@ public class Ejercicio01 {
         
         pilaLibros = new Stack<>();
         kl = new Scanner(System.in);
-        tamañoPila = 0;
         char opcion;
         
         try {
@@ -91,12 +90,10 @@ public class Ejercicio01 {
         pilaLibros.push(new Libro(
             obtenerDatos("Introduzca el título del Libro"),
             obtenerDatos("Intruduzca el autor")));
-        tamañoPila++;
         
     }
     
     public static Libro borraLibro (){
-        tamañoPila--;
         return pilaLibros.pop();        
     }
     

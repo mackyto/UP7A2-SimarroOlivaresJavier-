@@ -47,7 +47,7 @@ public class Ejercicio06 {
                     case '3': mostrarTodos(); break;
                     case 'x': break;
                     case 'X': break;
-                    default : throw new Exception ("Opcion de menú icorrecta");
+                    default : throw new Exception ("Opcion de menú incorrecta");
                 }
                 
             } while (!(opcion == 'x' || opcion == 'X'));
@@ -79,20 +79,15 @@ public class Ejercicio06 {
     public static void mostrarTodos () {
      
         Queue<Asistente> intercambio = new ArrayDeque<>();
-        int tamañoOriginal = pendientes.size();
         
-        for (Asistente a: pendientes){
-            intercambio.add(pendientes.poll());
-        }
+        System.out.printf("%-10s\t%5s\t\t%s\n\n","Nombre", "Edad", "Altura");    
         
-        pendientes.clear();
-            System.out.printf("%-10s\t%s\t%s\n\n","Nombre", "Edad", "Altura");        
-        for (int i = 0; i < tamañoOriginal; i++) {
-            Asistente asis = intercambio.poll();
-            System.out.printf("%-10s\t%3d\t%.2fm\n",asis.getNombre(), asis.getEdad(), asis.getAltura());
-            pendientes.add(asis);
+        for (Asistente asis: pendientes){
+            System.out.printf("%-10s\t%3d años\t%.2fmts\n",asis.getNombre(), asis.getEdad(), asis.getAltura());
+            intercambio.add(asis);
         }
         System.out.printf("\n\n");
+        pendientes = intercambio;
     }
     
     public static char imprimirMenu(){

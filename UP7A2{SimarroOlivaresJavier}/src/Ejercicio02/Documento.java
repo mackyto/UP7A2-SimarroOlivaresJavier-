@@ -17,7 +17,13 @@ public class Documento {
     
     private String nombre;
     private int numeroPaginas;
+    private int docsTotal = 0;
 
+    public Documento() {
+        this.nombre = "Documento" + String.format("%5d", docsTotal++);
+        this.numeroPaginas = (int)(Math.random() * 250) + 1;
+    }
+    
     public Documento(String nombre, int numeroPaginas) {
         this.nombre = nombre;
         this.numeroPaginas = numeroPaginas;
