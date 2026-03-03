@@ -45,7 +45,8 @@ public class Ejercicio04 {
                 
                     case '1': añadirCliente(); break;
                     case '2': finalizarCliente(); break;
-                    case '3': System.out.printf("Tiempo estimado de cola %s\n\n", estimacionTiempo());break;
+                    case '3': System.out.printf("Tiempo estimado de cola %1$tM:%1$tS\n\n", estimacionTiempo());break;
+                    case '4': mostrarTodos(); break;
                     case 'x': break;
                     case 'X': break;
                     default : throw new Exception ("Opcion de menú incorrecta");
@@ -67,7 +68,8 @@ public class Ejercicio04 {
         System.out.println("========================="); 
         System.out.println("1 Añadir Cliente."); 
         System.out.println("2 Borrar Cliente.");
-        System.out.println("3 Mostrar tiempo estimado."); 
+        System.out.println("3 Mostrar tiempo estimado.");
+        System.out.println("4 Mostrar todos."); 
 
         System.out.println("X Salir.");
         System.out.println();
@@ -104,6 +106,26 @@ public class Ejercicio04 {
     
     public static LocalTime estimacionTiempo () {
         return LocalTime.ofSecondOfDay(numeroTotalArticulos * tiempoArticulo);
+    }
+    
+    public static LocalTime estimacionTiempo (int articulos) {
+        return LocalTime.ofSecondOfDay(articulos * tiempoArticulo);
+    }
+    
+    public static void mostrarTodos () {
+     
+        Queue<Clientes> intercambio = new LinkedList<>();
+        
+        System.out.printf("%-15s\t   %8s\t%s\n\n","Nombre", "Artículos", "Tiempo Estimado");    
+        int contadorArticulos = 0;
+        
+        for (Clientes cl: cola){
+            System.out.printf("%-10s\t%3d artículos\t\t%3$tM:%3$tS\n",cl.getNombre(), cl.getNumeroArticulos() , estimacionTiempo(contadorArticulos));
+            contadorArticulos += cl.getNumeroArticulos();
+            intercambio.add(cl);
+        }
+        System.out.printf("\n\n");
+        cola = intercambio;
     }
     
 }

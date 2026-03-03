@@ -35,9 +35,9 @@ public class Ejercicio02 {
                 opcion = imprimirMenu();
                 switch (opcion){
                 
-                    case '1': break;
-                    case '2': break;
-                    case '3': break;
+                    case '1': añadirDoc(); break;
+                    case '2': documentoImpreso(); break;
+                    case '3': mostrarTodos(); break;
                     case 'x': break;
                     case 'X': break;
                     default : throw new Exception ("Opcion de menú incorrecta");
@@ -74,10 +74,10 @@ public class Ejercicio02 {
      
         Queue<Documento> intercambio = new ArrayDeque<>();
         
-        System.out.printf("%-10s\t%5s\t\t%s\n\n","Nombre", "Pagínas");    
+        System.out.printf("%-10s\t%5s\n\n","Nombre", "Pagínas");    
         
         for (Documento doc: cola){
-            System.out.printf("%-10s\t%3d años\n", doc.getNombre(), doc.getNumeroPaginas());
+            System.out.printf("%-10s\t%3d paginas\n", doc.getNombre(), doc.getNumeroPaginas());
             intercambio.add(doc);
         }
         System.out.printf("\n\n");
@@ -88,10 +88,10 @@ public class Ejercicio02 {
         
         char select;
         
-        System.out.printf("Menu (%d Visitantes añadidos)\n", cola.size());
+        System.out.printf("Menu (%d Documentos añadidos)\n", cola.size());
         System.out.println("========================="); 
-        System.out.println("1 Añadir Asistente."); 
-        System.out.println("2 Montar Asistente.");
+        System.out.println("1 Añadir Documento."); 
+        System.out.println("2 Imprimir Documento.");
         System.out.println("3 Mostrar lista completa."); 
 
         System.out.println("X Salir.");

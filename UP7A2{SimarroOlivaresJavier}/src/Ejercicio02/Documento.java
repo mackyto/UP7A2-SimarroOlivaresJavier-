@@ -17,7 +17,7 @@ public class Documento {
     
     private String nombre;
     private int numeroPaginas;
-    private int docsTotal = 0;
+    private static int docsTotal;
 
     public Documento() {
         this.nombre = "Documento" + String.format("%5d", docsTotal++);
