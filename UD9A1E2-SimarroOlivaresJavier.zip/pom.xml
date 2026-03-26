@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>1-daw</groupId>
+    <artifactId>UD9A1E2-SimarroOlivaresJavier</artifactId>
+    <version>1</version>
+    <packaging>jar</packaging>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.release>25</maven.compiler.release>
+        <exec.mainClass>UD09.UD9A1E1SimarroOlivaresJavier</exec.mainClass>
+    </properties>
+    
+    <repositories>
+        
+    <repository>
+        <id>objectdb</id>
+        <name>Object DB Repository</name>
+        <url>https://m2.objectdb.com</url>
+    </repository>
+    
+    </repositories>
+    
+    <dependencies>
+        
+    <dependency>
+        <groupId>com.objectdb</groupId>
+        <artifactId>objectdb</artifactId>
+        <version>2.9.4</version>
+    </dependency>
+    
+    </dependencies>
+</project>
